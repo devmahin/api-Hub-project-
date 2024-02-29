@@ -20,17 +20,22 @@ function displayFun(json) {
         const alldatashow = document.getElementById("alldatashow")
 
 
-        let blank = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGhmTe4FGFtGAgbIwVBxoD3FmED3E5EE99UGPItI0xnQ&s"
+        
+
+
+        // let blank = "";
+
         alldatashow.innerHTML += `
         <div class="card  bg-base-100 shadow-xl border-2">
-        <figure><img src="${image ? image : blank}" alt="Shoes" /></figure>
+        <figure><img src=${image ? image : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGhmTe4FGFtGAgbIwVBxoD3FmED3E5EE99UGPItI0xnQ&s'} alt="Shoes" /></figure>
         <div class="card-body">
             <h2 class="card-title">
             Features
             </h2>
-            <ul id="allFeatures" class="list-decimal pb-4">
-                ${features}
-            </ul>
+            <ul class="feature-list list-decimal">
+                  ${features.map((feature) => `<li>${feature}</li>`).join("")}
+                </ul>
+       
             <hr class="">
             <div class="card-actions justify-between">
                 <div>
@@ -44,12 +49,9 @@ function displayFun(json) {
         </div>
     </div>
         `
-        // const allFeatures = document.getElementById("allFeatures");
-        // features.forEach(val => {
-        //     let li = document.createElement("li")
-        //     li.innerText = val;
-        //     allFeatures.appendChild(li)
-        // })
+
+
+       
     })
 
 }
