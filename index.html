@@ -9,18 +9,47 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="">
 
     <header>
 
     </header>
     <main id="" class="container mx-auto">
         <section class="grid grid-cols-3 gap-10 py-10" id="alldatashow">
-         
-        
+
+
+        </section>
+        <span id="loading" class=" hidden loading loading-spinner loading-lg fixed top-1/2 w-28 left-1/2 -translate-y-1/2 -translate-x-1/2"></span>
+
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="">open modal</button> -->
+
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="min-w-[80%] max-w-[80%] relative bg-white h-5/6 rounded-lg">
+                    <div id="modal" class="flex p-10 gap-5">
+
+
+
+                    </div>
+
+                    <!-- <div class="absolute..."></div> -->
+                    <form method="dialog" class="absolute flex justify-center items-center -right-4 -top-4 ">
+
+
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class=" outline-none"><i
+                                class="fa-regular fa-circle-xmark text-4xl text-red-700"></i></button>
+
+                    </form>
+                </div>
+
+            </dialog>
         </section>
     </main>
     <footer>
@@ -30,7 +59,7 @@
 
 
 
- <!-- script  -->
+    <!-- script  -->
     <script src="script.js"></script>
 </body>
 
